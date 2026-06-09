@@ -15,10 +15,10 @@ phpstan:
 	vendor/bin/phpstan analyse -l 8 -v -c phpstan.neon app
 
 tests:
-	bash tests/run-tests.sh php tests/cases
+	vendor/bin/tester -C tests/cases
 
 coverage-clover:
-	bash tests/run-tests.sh php tests/cases --coverage ./temp/coverage.xml --coverage-src app --coverage-src tests/src
+	vendor/bin/tester -C tests/cases --coverage ./temp/coverage.xml --coverage-src app --coverage-src tests/src
 
 coverage-html:
-	bash tests/run-tests.sh php tests/cases --coverage ./temp/coverage.html --coverage-src app --coverage-src tests/src
+	vendor/bin/tester -C tests/cases --coverage ./temp/coverage.html --coverage-src app --coverage-src tests/src
