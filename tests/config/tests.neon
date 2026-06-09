@@ -23,7 +23,7 @@ migrations:
 	dir: %appDir%/../migrations # migrations base directory
 	driver: mysql               # pgsql or mysql
 	dbal: nette                 # nextras, nette, doctrine or dibi
-
+	withDummyData: true
 
 database:
 	dsn: 'mysql:host=127.0.0.1;dbname=test'
