@@ -1,0 +1,17 @@
+{
+    "_hash": "2aefd9c492da04b6c0bdf97da589890b0f749da279213d71480eaf1c3065fc2d",
+    "patches": {
+        "nette/tester": [
+            {
+                "package": "nette/tester",
+                "description": "removed hiding console cursor",
+                "url": "composer-patches/nette/tester/removed-hiding-console-cursor.patch",
+                "sha256": "6458ca3ca2a2f885cd3afc3f430a23c37d7e077ed6d407e2f0277573f95a08b1",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
+}

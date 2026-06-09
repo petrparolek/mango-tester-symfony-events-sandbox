@@ -18,7 +18,7 @@
 		"php": ">=8.1",
 		"nette/application": "~3.2.0",
 		"nette/bootstrap": "~3.2.0",
-		"nette/caching": "~3.3.0",
+		"nette/caching": "~3.4.0",
 		"nette/database": "~3.2.0",
 		"nette/di": "~3.2.0",
 		"nette/finder": "^3.0",
@@ -30,24 +30,24 @@
 		"nette/utils": "^4.0",
 		"latte/latte": "^3.0",
 		"tracy/tracy": "~2.10.0",
-		"dg/adminer-custom": "^2.0",
 		"contributte/console": "^0.10.0",
-		"nextras/migrations": "^3.1"
+		"nextras/migrations": "^3.1",
+		"cweagans/composer-patches": "^2.0"
 	},
 	"require-dev": {
-		"nette/tester": "~2.5.0",
-		"phpstan/phpstan": "^1.0",
-		"phpstan/phpstan-deprecation-rules": "^1.0",
-		"phpstan/phpstan-doctrine": "^1.0",
-		"phpstan/phpstan-mockery": "^1.0",
-		"phpstan/phpstan-nette": "^1.0",
-		"phpstan/phpstan-strict-rules": "^1.0",
+		"nette/tester": "~2.6.0",
+		"phpstan/phpstan": "^2.0",
+		"phpstan/phpstan-deprecation-rules": "^2.0",
+		"phpstan/phpstan-doctrine": "^2.0",
+		"phpstan/phpstan-mockery": "^2.0",
+		"phpstan/phpstan-nette": "^2.0",
+		"phpstan/phpstan-strict-rules": "^2.0",
 		"contributte/qa": "^0.3",
 		"mockery/mockery": "^1.0",
 		"webnazakazku/mango-tester-http-mocks": "~0.5.0",
 		"webnazakazku/mango-presenter-tester": "~0.5.0",
 		"webnazakazku/mango-tester-database-creator": "~0.4.0",
-		"webnazakazku/mango-tester-infrastructure": "~0.6.0",
+		"webnazakazku/mango-tester-infrastructure": "~0.7.0",
 		"dg/bypass-finals": "^1.3"
 	},
 	"autoload": {
@@ -57,14 +57,26 @@
 	},
 	"minimum-stability": "stable",
 	"scripts": {
-		"phpstan": "phpstan analyse"
+		"post-update-cmd": [
+			"composer patches-relock",
+			"composer patches-repatch"
+		]
 	},
 	"config": {
 		"platform": {
 			"php": "8.1.2"
 		},
 		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"cweagans/composer-patches": true
+		}
+	},
+	"extra": {
+		"composer-exit-on-patch-failure": true,
+		"patches": {
+			"nette/tester": {
+				"removed hiding console cursor": "composer-patches/nette/tester/removed-hiding-console-cursor.patch"
+			}
 		}
 	}
 }

@@ -6,7 +6,7 @@ DG\BypassFinals::enable();
 
 $configurator = new Nette\Bootstrap\Configurator();
 
-// we need to override defaultExtensions because Nette\Bootstrap\Configurator registers
+// we need to override defaultExtensions because Nette\Configurator registers
 // butch of extensions we don't need and that clash with the Mango Tester
 $configurator->defaultExtensions = [
 	'php' => Nette\Bootstrap\Extensions\PhpExtension::class,
@@ -34,9 +34,17 @@ $configurator->addStaticParameters([
 ]);
 
 $configurator->addConfig(__DIR__ . '/config/tests.neon');
-$configurator->addConfig(__DIR__ . '/config/tests.local.neon');
+
+if (file_exists(__DIR__ . '/config/tests.local.neon')) {
+	$configurator->addConfig(__DIR__ . '/config/tests.local.neon');
+}
+
+$configurator->addStaticParameters([
+	'baseUrl' => '',
+]);
 
 Tester\Environment::setup();
 Tester\Dumper::$maxPathSegments = 32;
+Tracy\Debugger::$showLocation = true;
 
 return [$configurator, 'createContainer'];

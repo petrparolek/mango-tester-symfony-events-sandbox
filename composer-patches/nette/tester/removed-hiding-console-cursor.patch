@@ -1,0 +1,43 @@
+diff --git a/src/Framework/Ansi.php b/src/Framework/Ansi.php
+index 0568449..47aaa1a 100644
+--- a/src/Framework/Ansi.php
++++ b/src/Framework/Ansi.php
+@@ -64,24 +64,6 @@ public static function boldOff(): string
+ 	}
+ 
+ 
+-	/**
+-	 * Returns ANSI sequence to show the cursor.
+-	 */
+-	public static function showCursor(): string
+-	{
+-		return "\e[?25h";
+-	}
+-
+-
+-	/**
+-	 * Returns ANSI sequence to hide the cursor.
+-	 */
+-	public static function hideCursor(): string
+-	{
+-		return "\e[?25l";
+-	}
+-
+-
+ 	/**
+ 	 * Returns ANSI sequence to clear from cursor to end of line.
+ 	 */
+diff --git a/src/Runner/CliTester.php b/src/Runner/CliTester.php
+index 409ad5a..2ba4f4c 100644
+--- a/src/Runner/CliTester.php
++++ b/src/Runner/CliTester.php
+@@ -74,9 +74,6 @@ public function run(): int
+ 
+ 		ob_end_flush();
+ 
+-		echo Ansi::hideCursor();
+-		register_shutdown_function(fn() => print Ansi::showCursor());
+-
+ 		if ($this->options['--watch']) {
+ 			$this->watch($runner);
+ 			return 0;
