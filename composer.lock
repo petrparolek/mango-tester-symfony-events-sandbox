@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb35c1a0c606e67b49dd4b02cb0dc724",
+    "content-hash": "925b93808004d95bfc7e44c561068f6e",
     "packages": [
         {
             "name": "contributte/console",
@@ -76,6 +76,161 @@
                 }
             ],
             "time": "2024-01-04T20:10:58+00:00"
+        },
+        {
+            "name": "contributte/event-dispatcher",
+            "version": "v0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/contributte/event-dispatcher.git",
+                "reference": "00c44782f8e4c16c8c97859d83d42e7e6bdf063e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/contributte/event-dispatcher/zipball/00c44782f8e4c16c8c97859d83d42e7e6bdf063e",
+                "reference": "00c44782f8e4c16c8c97859d83d42e7e6bdf063e",
+                "shasum": ""
+            },
+            "require": {
+                "nette/di": "^3.1.8",
+                "php": ">=8.1",
+                "symfony/event-dispatcher": "^6.4.3 || ^7.0.3"
+            },
+            "require-dev": {
+                "contributte/phpstan": "^0.1",
+                "contributte/qa": "^0.4",
+                "contributte/tester": "^0.3",
+                "mockery/mockery": "^1.5.0",
+                "psr/log": "^2.0.0 || ^3.0.0",
+                "tracy/tracy": "^2.10.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.10.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Contributte\\EventDispatcher\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Milan Felix Šulc",
+                    "homepage": "https://f3l1x.io"
+                }
+            ],
+            "description": "Best event dispatcher / event manager / event emitter for Nette Framework",
+            "homepage": "https://github.com/contributte/event-dispatcher",
+            "keywords": [
+                "dispatcher",
+                "emitter",
+                "event",
+                "nette",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/contributte/event-dispatcher/issues",
+                "source": "https://github.com/contributte/event-dispatcher/tree/v0.9.1"
+            },
+            "funding": [
+                {
+                    "url": "https://contributte.org/partners.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/f3l1x",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-02-05T16:00:14+00:00"
+        },
+        {
+            "name": "contributte/event-dispatcher-extra",
+            "version": "v0.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/contributte/event-dispatcher-extra.git",
+                "reference": "a4180b3683082b1840478a28717ff09611d1ff31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/contributte/event-dispatcher-extra/zipball/a4180b3683082b1840478a28717ff09611d1ff31",
+                "reference": "a4180b3683082b1840478a28717ff09611d1ff31",
+                "shasum": ""
+            },
+            "require": {
+                "nette/di": "^3.1.9",
+                "php": ">=8.1",
+                "symfony/event-dispatcher": "^6.4.3 || ^7.0.3"
+            },
+            "conflict": {
+                "latte/latte": "<3.0.13"
+            },
+            "require-dev": {
+                "contributte/event-dispatcher": "^0.9.0",
+                "contributte/phpstan": "^0.1",
+                "contributte/qa": "^0.4",
+                "contributte/tester": "^0.3",
+                "latte/latte": "^3.0.13",
+                "nette/application": "^3.1.10",
+                "nette/http": "^3.2.1",
+                "nette/security": "^3.1.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Contributte\\Events\\Extra\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Milan Felix Šulc",
+                    "homepage": "https://f3l1x.io"
+                }
+            ],
+            "description": "Nette-based Symfony events for application, presenter, form, latte, templates, security and many others.",
+            "homepage": "https://github.com/contributte/event-dispatcher-extra",
+            "keywords": [
+                "Bridge",
+                "application",
+                "dispatcher",
+                "event",
+                "form",
+                "latte",
+                "nette",
+                "security",
+                "template"
+            ],
+            "support": {
+                "issues": "https://github.com/contributte/event-dispatcher-extra/issues",
+                "source": "https://github.com/contributte/event-dispatcher-extra/tree/v0.10.1"
+            },
+            "funding": [
+                {
+                    "url": "https://contributte.org/partners.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/f3l1x",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-02-05T19:02:34+00:00"
         },
         {
             "name": "cweagans/composer-configurable-plugin",
@@ -1654,6 +1809,56 @@
             "time": "2021-11-05T16:47:00+00:00"
         },
         {
+            "name": "psr/event-dispatcher",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/event-dispatcher.git",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\EventDispatcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Standard interfaces for event handling.",
+            "keywords": [
+                "events",
+                "psr",
+                "psr-14"
+            ],
+            "support": {
+                "issues": "https://github.com/php-fig/event-dispatcher/issues",
+                "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
+            },
+            "time": "2019-01-08T18:20:26+00:00"
+        },
+        {
             "name": "symfony/console",
             "version": "v6.4.41",
             "source": {
@@ -1821,6 +2026,170 @@
                 }
             ],
             "time": "2026-04-13T15:52:40+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v6.4.37",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "2e3bf817ba9347341ab15926700fb6320367c0e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/2e3bf817ba9347341ab15926700fb6320367c0e1",
+                "reference": "2e3bf817ba9347341ab15926700fb6320367c0e1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/event-dispatcher-contracts": "^2.5|^3"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<5.4",
+                "symfony/service-contracts": "<2.5"
+            },
+            "provide": {
+                "psr/event-dispatcher-implementation": "1.0",
+                "symfony/event-dispatcher-implementation": "2.0|3.0"
+            },
+            "require-dev": {
+                "psr/log": "^1|^2|^3",
+                "symfony/config": "^5.4|^6.0|^7.0",
+                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
+                "symfony/error-handler": "^5.4|^6.0|^7.0",
+                "symfony/expression-language": "^5.4|^6.0|^7.0",
+                "symfony/http-foundation": "^5.4|^6.0|^7.0",
+                "symfony/service-contracts": "^2.5|^3",
+                "symfony/stopwatch": "^5.4|^6.0|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher/tree/v6.4.37"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-04-13T14:11:12+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher-contracts",
+            "version": "v3.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
+                "reference": "ccba7060602b7fed0b03c85bf025257f76d9ef32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/ccba7060602b7fed0b03c85bf025257f76d9ef32",
+                "reference": "ccba7060602b7fed0b03c85bf025257f76d9ef32",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "psr/event-dispatcher": "^1"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
+                "branch-alias": {
+                    "dev-main": "3.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\EventDispatcher\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to dispatching event",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-01-05T13:30:16+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

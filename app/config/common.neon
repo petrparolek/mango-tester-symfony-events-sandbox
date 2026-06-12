@@ -5,6 +5,9 @@
 extensions:
 	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
 	migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
+	events: Contributte\EventDispatcher\DI\EventDispatcherExtension
+	events.application: Contributte\Events\Extra\DI\EventApplicationBridgeExtension
+
 
 
 application:
@@ -33,9 +36,13 @@ migrations:
 	dbal: nette                 # nextras, nette, doctrine or dibi
 	withDummyData: yes
 
+events:
+	debug: true
+
 services:
 	- App\Model\UserManager
 	- App\Forms\FormFactory
 	- App\Forms\SignInFormFactory
 	- App\Forms\SignUpFormFactory
+	- App\Events\TestFooSubscriber
 	router: App\Router\RouterFactory::createRouter
