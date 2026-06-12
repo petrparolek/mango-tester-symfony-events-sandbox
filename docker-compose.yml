@@ -2,7 +2,8 @@ version: '3.3'
 
 services:
   web:
-    image: registry.gitlab.com/webnazakazku/prebuild-php:8.1-apache
+    build:
+      context: .docker/apache
     volumes:
       - ./:/var/www/html
       - ./.docker/apache/sites-enabled/default.conf:/etc/apache2/sites-enabled/default.conf

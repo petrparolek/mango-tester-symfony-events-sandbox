@@ -23,6 +23,7 @@
     <rule ref="./vendor/contributte/qa/ruleset.xml">
         <!-- Exclude specific rules from imported ruleset -->
         <exclude name="SlevomatCodingStandard.Classes.ClassStructure.IncorrectGroupOrder" />
+        <exclude name="Squiz.WhiteSpace.LanguageConstructSpacing" />
     </rule>
 
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName">

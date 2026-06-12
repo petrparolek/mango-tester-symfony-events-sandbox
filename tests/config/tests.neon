@@ -7,6 +7,12 @@ extensions:
 	mango.tester.databaseCreatorInfrastructure: Webnazakazku\MangoTester\DatabaseCreator\Bridges\Infrastructure\DatabaseCreatorInfrastructureExtension
 
 parameters:
+	dbHost: database
+	dbPort: 3306
+	dbUser: root
+	dbPassword: root
+	dbName: mango-tester
+
 	appContainer:
 		parameters:
 			appDir: %appDir%
@@ -26,9 +32,9 @@ migrations:
 	withDummyData: true
 
 database:
-	dsn: 'mysql:host=127.0.0.1;dbname=test'
-	user:
-	password:
+	dsn: 'mysql:host=%dbHost%:%dbPort%;dbname=%dbName%'
+	user: %dbUser%
+	password: %dbPassword%
 	options:
 		lazy: yes
 

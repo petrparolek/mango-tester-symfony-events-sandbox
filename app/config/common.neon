@@ -18,14 +18,14 @@ session:
 
 
 database:
-	dsn: 'mysql:host=127.0.0.1;dbname=test'
-	user:
-	password:
+	dsn: 'mysql:host=database;dbname=mango-tester'
+	user: root
+	password: root
 	options:
 		lazy: yes
 
 console:
-    url: https://test.local
+    url: https://localhost
 
 migrations:
 	dir: %appDir%/../migrations # migrations base directory

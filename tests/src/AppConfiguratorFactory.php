@@ -29,7 +29,11 @@ class AppConfiguratorFactory implements IAppConfiguratorFactory
 		$configurator->setTempDirectory($testContainerParameters['tempDir']);
 
 		$configurator->addConfig($testContainerParameters['appDir'] . '/config/common.neon');
-		$configurator->addConfig($testContainerParameters['appDir'] . '/config/local.neon');
+
+		if (file_exists($testContainerParameters['appDir'] . '/config/local.neon')) {
+			$configurator->addConfig($testContainerParameters['appDir'] . '/config/local.neon');
+		}
+
 		$testDatabaseHost = $testContainerParameters['dbHost'] . ':' . $testContainerParameters['dbPort'];
 		$configurator->addConfig([
 			'console' => [
